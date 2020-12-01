@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -16,19 +15,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/df1dfdeddd.js" crossorigin="anonymous"></script>
     <!-- custome css -->
-    <link rel="stylesheet" href="[Bootstrap]radioHorizon.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="tagsinput.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="tagsInput/tagsinput.css" />
     <!-- custome javascript -->
-    <script src="app.js" defer></script>
-    <script src="formControl.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+    <script src="scripts/formControl.js" defer></script>
+    <script src="scripts/resultcontrol.js"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/Logo-ILDE2.svg" />
     <title></title>
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="Logo-ILDE2.svg" height="30" class="d-inline-block align-top" />
+        <img src="assets/Logo-ILDE2.svg" height="30" class="d-inline-block align-top" />
       </a>
       <button
         class="navbar-toggler"
@@ -96,11 +97,24 @@
 
             <div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
               <label for="distance VS classroom" class="btn btn-outline-info ml-1 mb-1">
-                <input type="radio" name="distance VS classroom" id="class" value="In the Classroom" /> In the Classroom
+                <input
+                  type="radio"
+                  name="distance VS classroom"
+                  id="class"
+                  value="In the Classroom"
+                  autocomplete="off"
+                />
+                In the Classroom
               </label>
               <label for="distance VS classroom" class="btn btn-outline-info ml-1 mb-1">
-                <input type="radio" name="distance VS classroom" id="distance" value="Distance Learning" /> Distance
-                Learning
+                <input
+                  type="radio"
+                  name="distance VS classroom"
+                  id="distance"
+                  value="Distance Learning"
+                  autocomplete="off"
+                />
+                Distance Learning
               </label>
             </div>
           </div>
@@ -376,6 +390,10 @@
             <div class="my-4 d-flex justify-content-end">
               <button name="reset" onclick="reset()" class="btn btn-outline-warning ml-3">Reset Form</button>
 
+              <button type="submit" formaction="test-result.html" class="btn btn-outline-success ml-3">
+                Test Submit
+                <i class="fas fa-thumbs-up"></i>
+              </button>
               <button type="submit" formaction="res3.html" class="btn btn-outline-success ml-3">
                 Submit
                 <i class="fas fa-thumbs-up"></i>
@@ -404,22 +422,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
-    <script src="tagsinput.js"></script>
+    <script src="tagsInput/tagsinput.js" defer></script>
     <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36251023-1']);
-      _gaq.push(['_setDomainName', 'jqueryscript.net']);
-      _gaq.push(['_trackPageview']);
-
-      (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src =
-          ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
+      document.addEventListener('DOMContentLoaded', () => {
+        localStorage.clear();
+      });
     </script>
   </body>
 </html>
