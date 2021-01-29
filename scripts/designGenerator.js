@@ -13,7 +13,7 @@ const designData = [
     description:
       'Decide which is the best summary of the history of world war II among those provided in class and give your reasons.',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/12988/',
+    link: './previews/preview1.html',
     minutes: 'Less than 10 minutes',
     distanceClassroom: 'In the Classroom',
     educationlevel: 'Lower Secondary Education',
@@ -27,7 +27,7 @@ const designData = [
     name: 'Historical eras',
     description: 'Assess the quality of the five main historical eras presented in the history timeline.',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
+    link: './previews/preview2.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
     educationlevel: 'Bachelor or Equivalent',
@@ -42,7 +42,7 @@ const designData = [
     description:
       'Define, from the theoretical perspective, what are the main concepts of Expressionism and Surrealism.',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
+    link: './previews/preview3.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
     educationlevel: 'Lower Secondary Education',
@@ -57,7 +57,7 @@ const designData = [
     description:
       'Evaluate if the monologue watched in class could be considered a  Shakespearian monologue based on the authors’ style and historical characteristics',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
+    link: './previews/preview4.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
     educationlevel: 'Bachelor or Equivalent',
@@ -71,7 +71,7 @@ const designData = [
     name: 'Network evaluation',
     description: 'Judge WAN and LAN based on the security issues.',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
+    link: './previews/preview5.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
     educationlevel: 'Lower Secondary Education',
@@ -86,7 +86,7 @@ const designData = [
     description:
       'Find errors within classification of instruments provided in class according to the following types: percussion, stringed, keyboard, wind, and electronic.',
     author: '',
-    link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
+    link: './previews/preview6.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
     educationlevel: 'Lower Secondary Education',
@@ -230,7 +230,7 @@ function designTemplate(design) {
       
         <h5 class="card-title">${design.name}</h5>
          <p class="card-text">${design.description} </p>
-              <a href="${design.link}" target="_blank" class="btn btn-primary btn-sm"
+              <a href="${design.link}" class="btn btn-primary btn-sm"
                 >Preview</a
               >
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#confirmModal">Select</button>
