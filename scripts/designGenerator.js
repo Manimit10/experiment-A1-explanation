@@ -19,7 +19,7 @@ const designData = [
     educationlevel: 'Lower Secondary Education',
     studentamount: 'Less than 10 students',
     subject: 'Humanities and Arts',
-    time: ' Less than 10 minutes',
+    time: 'Less than 10 minutes',
     bloom: 'Evaluation',
   },
   {
@@ -33,7 +33,7 @@ const designData = [
     educationlevel: 'Bachelor or Equivalent',
     studentamount: 'Less than 10 students',
     subject: 'Humanities and Arts',
-    time: 'Less than 10 minutes',
+    time: 'Less than 10 mins',
     bloom: 'Evaluation',
   },
   {
@@ -48,8 +48,8 @@ const designData = [
     educationlevel: 'Lower Secondary Education',
     studentamount: 'Less than 10 students',
     subject: 'Humanities and Arts',
-    time: 'Less than 10 minutes',
-    bloom: 'remember',
+    time: 'Less than 10 mins',
+    bloom: 'Remember',
   },
   {
     id: 4,
@@ -60,8 +60,8 @@ const designData = [
     link: './previews/preview4.html',
     minutes: '120 minutes',
     distanceClassroom: 'Distance Learning',
-    educationlevel: 'Bachelor or Equivalent',
-    studentamount: 'Lower Secondary Education',
+    educationlevel: 'Lower Secondary Education',
+    studentamount: 'More than 40 students',
     subject: 'Humanities and Arts',
     time: 'Between 10-20 mins',
     bloom: 'Evaluate',
@@ -77,7 +77,7 @@ const designData = [
     educationlevel: 'Lower Secondary Education',
     studentamount: 'Less than 10 students',
     subject: 'Engineering, Manufacturing & Construction',
-    time: ' Less than 10 minutes',
+    time: 'Less than 10 minutes',
     bloom: 'Evaluate',
   },
   {
@@ -92,7 +92,7 @@ const designData = [
     educationlevel: 'Lower Secondary Education',
     studentamount: 'Between 30-40 students',
     subject: 'Humanities and Arts',
-    time: 'more than 40 min',
+    time: 'More than 40 mins',
     bloom: 'Evaluate',
   },
   // {
@@ -192,7 +192,11 @@ function sub(subject) {
     return ``;
   }
 } // end of subject function
-
+function timey2(time) {
+  return `<div class="alert alert-success" role="alert">
+    ${time}</span>
+    </div>`;
+}
 function timey(time) {
   if (time_in_Storage == time) {
     console.log(time);
@@ -214,14 +218,14 @@ function bloomy(bloom) {
   }
 }
 
-function foods(foods) {
-  return `
-  <h4>Favorite Foods</h4>
-  <ul class="foods-list">
-  ${foods.map((food) => `<li>${food}</li>`).join('')}
-  </ul>
-  `;
-}
+// function foods(foods) {
+//   return `
+//   <h4>Favorite Foods</h4>
+//   <ul class="foods-list">
+//   ${foods.map((food) => `<li>${food}</li>`).join('')}
+//   </ul>
+//   `;
+// }
 function designTemplate(design) {
   return `
   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mt-5">
@@ -240,6 +244,7 @@ function designTemplate(design) {
               ${amount(design.studentamount)}
               ${sub(design.subject)}
               ${timey(design.time)}
+              
               ${bloomy(design.bloom)}
 
             </div>
@@ -247,22 +252,7 @@ function designTemplate(design) {
         </div>
     `;
 }
-// function petTemplate(pet) {
-//   return `
-//       <div class="animal">
-//       <img class="pet-photo" src="${pet.photo}">
-//       <h2 class="pet-name">${pet.name} <span class="species">(${pet.species})</span></h2>
-//       <p><strong>Age:</strong> ${age(pet.birthYear)}</p>
-//       ${pet.favFoods ? foods(pet.favFoods) : ''}
-//       </div>
-//     `;
-// }
 
-// document.getElementById('app').innerHTML = `
-//     <h1 class="app-title">Pets (${designData.length} results)</h1>
-//     ${designData.map(petTemplate).join('')}
-//     <p class="footer">These ${designData.length} pets were added recently. Check back soon for updates.</p>
-//   `;
 document.getElementById('app').innerHTML = `
   
   ${designData.map(designTemplate).join('')}
