@@ -95,59 +95,6 @@ const designData = [
     time: 'More than 40 mins',
     bloom: 'Evaluate',
   },
-  // {
-  //   name: 'Metodología Docente',
-  //   description:
-  //     '¿Qué ventajas e inconvenientes destacarías del uso de múltiples estrategias metodológicas de E-A para atender la diversidad del estudiantado?',
-  //   author: 'Verónica',
-  //   link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
-  //   minutes: '120 minutes',
-  //   distanceClassroom: 'In the Classroom',
-  //   educationlevel: 'Early Childhood Education',
-  //   studentamount: 'Between 30-40 students',
-  //   subject: 'Humanities and Arts',
-  //   time: 'More than 40 mins',
-  //   bloom: 'Analysis',
-  // },
-  // {
-  //   name: 'Asking questions to peers',
-  //   description: 'Ask a question to the peers that have presented',
-  //   author: 'Davinia',
-  //   link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
-  //   minutes: '120 minutes',
-  //   distanceClassroom: 'Distance Learning',
-  //   educationlevel: 'Post Secndary non-tertiary',
-  //   studentamount: 'Less than 10 students',
-  //   subject: 'Agriculture',
-  //   time: 'More than 40 mins',
-  //   bloom: 'Apply',
-  // },
-  // {
-  //   name: 'Questions about Science communication',
-  //   description: 'Propose a question for the groups having studied "Science communication',
-  //   author: 'Davinia',
-  //   link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
-  //   minutes: '120 minutes',
-  //   distanceClassroom: 'Distance Learning',
-  //   educationlevel: 'Upper Secondary Education',
-  //   studentamount: 'Less than 10 students',
-  //   subject: 'General Programmes',
-  //   time: 'Between 10-20 mins',
-  //   bloom: 'Remember',
-  // },
-  // {
-  //   name: 'Questions about Science communication',
-  //   description: 'Propose a question for the groups having studied "Science communication',
-  //   author: 'Davinia',
-  //   link: 'https://ilde.upf.edu/pg/lds/vieweditor/14229/',
-  //   minutes: '120 minutes',
-  //   distanceClassroom: 'Distance Learning',
-  //   educationlevel: 'Bachelor or Equivalent',
-  //   studentamount: 'Less than 10 students',
-  //   subject: 'Health & Wellfare',
-  //   time: 'Between 30-40 mins',
-  //   bloom: 'Create',
-  // },
 ];
 
 function dis(dist) {
@@ -192,11 +139,7 @@ function sub(subject) {
     return ``;
   }
 } // end of subject function
-function timey2(time) {
-  return `<div class="alert alert-success" role="alert">
-    ${time}</span>
-    </div>`;
-}
+
 function timey(time) {
   if (time_in_Storage == time) {
     console.log(time);
